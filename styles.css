@@ -32,3 +32,12 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%; /* Makes the image circular */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
