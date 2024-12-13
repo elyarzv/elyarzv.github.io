@@ -41,3 +41,38 @@ img {
     border-radius: 50%; /* Makes the image circular */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
 }
+
+/* Game Section Styles */
+#game {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+canvas {
+    border: 1px solid #333;
+    cursor: crosshair;
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#guessResult {
+    margin-top: 20px;
+    font-weight: bold;
+}
