@@ -28,13 +28,7 @@ body {
 
 @media (max-width: 600px) {
     .zoom-text::before {
-        content: "Hi my name";
         display: block;
-        font-size: 3rem;
-    }
-
-    .zoom-text {
-        content: "is Elyar";
         font-size: 3rem;
     }
 }
