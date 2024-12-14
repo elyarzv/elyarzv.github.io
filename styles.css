@@ -23,4 +23,16 @@ body {
     font-weight: bold;
     text-align: center;
     transition: transform 0.1s ease-in-out; /* Smooth zoom effect */
+    opacity: 0;
+}
+
+@media (max-width: 600px) {
+    .zoom-text::before {
+        content: "Hi my name";
+        display: block;
+    }
+
+    .zoom-text {
+        content: "is Elyar";
+    }
 }
