@@ -31,7 +31,16 @@ body {
 /* Media Query for Smartphones */
 @media (max-width: 1000px) {
     .zoom-text {
-        font-size: 1rem; /* Smaller font size for smartphones */
-        max-width: 80%; /* Constrain text width more */
+        position: fixed; /* Keeps the text centered */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem; /* Default font size */
+        font-weight: bold;
+        text-align: center; /* Center-aligns the text */
+        max-width: 90%; /* Constrain the text width */
+        word-wrap: break-word; /* Ensure words wrap properly */
+        white-space: normal; /* Allow the text to wrap */
+        line-height: 1.2; /* Space between lines */
     }
 }
