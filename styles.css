@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 /* Fullscreen Black Background */
@@ -16,20 +15,23 @@ body {
 
 /* Zoom Text */
 .zoom-text {
-    position: fixed; /* Keeps the text in place */
-    top: 50%; /* Vertically centers the text */
-    left: 50%; /* Horizontally centers the text */
-    transform: translate(-50%, -50%) scale(1); /* Centers the text and sets initial scale */
-    font-size: 5rem; /* Adjust font size as needed */
+    position: fixed; /* Keeps the text centered */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem; /* Default font size */
     font-weight: bold;
-    text-align: center;
-    transition: transform 0.1s ease-in-out; /* Smooth zoom effect */
-    opacity: 0;
+    text-align: center; /* Center-aligns the text */
+    max-width: 90%; /* Constrain the text width */
+    word-wrap: break-word; /* Ensure words wrap properly */
+    white-space: normal; /* Allow the text to wrap */
+    line-height: 1.2; /* Space between lines */
 }
 
+/* Media Query for Smartphones */
 @media (max-width: 600px) {
-    .zoom-text{
-        display: block;
-        font-size: 5rem;
+    .zoom-text {
+        font-size: 7vw; /* Smaller font size for smartphones */
+        max-width: 80%; /* Constrain text width more */
     }
 }
