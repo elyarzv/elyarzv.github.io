@@ -1,92 +1,26 @@
-/* Global Reset */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Fullscreen Black Background */
 body {
-    font-family: Arial, sans-serif;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
-    padding-bottom: 50px;
-}
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 1em 0;
-    text-align: center;
-}
-
-main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-footer {
-    text-align: center;
-    background: #333;
-    color: #fff;
-    padding: 1em 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 50%; /* Makes the image circular */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-}
-
-/* Game Section Styles */
-#game {
-    margin-top: 30px;
-    margin: 30px auto;
-    margin: 0 auto; /* Centers the section horizontally */
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-canvas {
-    border: 1px solid #333;
-    cursor: crosshair;
-    display: block;
-    margin: 0 auto;
-}
-
-button {
-    margin: 10px;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #007BFF;
+    background-color: black;
     color: white;
-    border: none;
-    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    height: 200vh; /* Make the page scrollable */
 }
 
-button:hover {
-    background-color: #0056b3;
-}
-
-#guessResult {
-    margin-top: 20px;
+/* Zoom Text */
+.zoom-text {
+    position: fixed; /* Keeps the text in place */
+    top: 50%; /* Vertically centers the text */
+    left: 50%; /* Horizontally centers the text */
+    transform: translate(-50%, -50%) scale(1); /* Centers the text and sets initial scale */
+    font-size: 5rem; /* Adjust font size as needed */
     font-weight: bold;
-}
-
-#game * {
     text-align: center;
+    transition: transform 0.1s ease-in-out; /* Smooth zoom effect */
 }
