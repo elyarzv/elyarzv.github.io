@@ -30,9 +30,11 @@ body {
     .zoom-text::before {
         content: "Hi my name";
         display: block;
+        font-size: 8vw;
     }
 
     .zoom-text {
         content: "is Elyar";
+        font-size: 8vw;
     }
 }
