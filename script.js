@@ -11,8 +11,8 @@ window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
 
     // Adjust scale based on scroll position (control the divisor to tweak sensitivity)
-    const scaleValue = 1 + scrollY / 500;
-    const opacityValue = Math.max(1.5 - scrollY / 300, 0);
+    const scaleValue = 1 + scrollY / 2000;
+    const opacityValue = Math.max(1.5 - scrollY / 500, 0);
 
     // Apply the scaling effect
     zoomText.style.transform = `translate(-50%, -50%) scale(${scaleValue})`;
