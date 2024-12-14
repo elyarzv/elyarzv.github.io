@@ -29,9 +29,9 @@ body {
 }
 
 /* Media Query for Smartphones */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .zoom-text {
-        font-size: 2rem; /* Smaller font size for smartphones */
+        font-size: 1rem; /* Smaller font size for smartphones */
         max-width: 80%; /* Constrain text width more */
     }
 }
