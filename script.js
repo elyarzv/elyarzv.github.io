@@ -1,5 +1,10 @@
 const zoomText = document.querySelector('.zoom-text');
 
+window.addEventListener("load", () => {
+    const zoomText = document.querySelector(".zoom-text");
+    zoomText.style.opacity = "1"; // Make text visible
+});
+
 // Listen for scroll events
 window.addEventListener('scroll', () => {
     // Calculate scroll position
