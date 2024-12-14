@@ -27,8 +27,8 @@ body {
 }
 
 @media (max-width: 600px) {
-    .zoom-text::before {
+    .zoom-text{
         display: block;
-        font-size: 3rem;
+        font-size: 5rem;
     }
 }
