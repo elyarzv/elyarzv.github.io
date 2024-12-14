@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    opacity: 0;
+
 }
 
 /* Fullscreen Black Background */
@@ -27,9 +27,9 @@ body {
     opacity: 0;
 }
 
-/* @media (max-width: 600px) {
+@media (max-width: 600px) {
     .zoom-text{
         display: block;
         font-size: 5rem;
     }
-} */
+}
