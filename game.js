@@ -5,45 +5,35 @@ const ctx = canvas.getContext("2d");
 // Variables to track drawing state
 let isDrawing = false;
 
-// Start drawing when the user presses the mouse or touches
-canvas.addEventListener("mousedown", startDrawing);
-canvas.addEventListener("touchstart", startDrawing);
+// Resize canvas dynamically
+function resizeCanvas() {
+    const size = Math.min(window.innerWidth, 300); // Limit size to 300px max
+    canvas.width = size;
+    canvas.height = size;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
 
-// Stop drawing when the user releases the mouse or stops touching
-canvas.addEventListener("mouseup", stopDrawing);
-canvas.addEventListener("mouseleave", stopDrawing);
-canvas.addEventListener("touchend", stopDrawing);
-
-// Draw when the user moves the mouse or finger
-canvas.addEventListener("mousemove", draw);
-canvas.addEventListener("touchmove", draw);
-
-// Functions
+// Start drawing
 function startDrawing(event) {
     isDrawing = true;
-    ctx.beginPath(); // Start a new path for the drawing
+    saveState(); // Save canvas state for undo
+    ctx.beginPath(); // Start a new path
     const { x, y } = getCanvasCoordinates(event);
-    ctx.moveTo(x, y); // Move the drawing cursor to the starting point
-    console.log("Start drawing at:", x, y);
+    ctx.moveTo(x, y); // Move cursor to starting point
 }
 
+// Stop drawing
 function stopDrawing() {
     isDrawing = false;
-    ctx.closePath(); // Close the path when done drawing
-    console.log("Stop drawing");
 }
 
+// Draw on canvas
 function draw(event) {
-    if (!isDrawing) return; // Don't draw if the user isn't pressing down
+    if (!isDrawing) return;
     const { x, y } = getCanvasCoordinates(event);
-    ctx.lineWidth = 5; // Set the thickness of the line
-    ctx.lineCap = "round"; // Make the line ends rounded
-    ctx.strokeStyle = "#000"; // Set the line color
-    ctx.lineTo(x, y); // Create a line to the current cursor position
-    ctx.stroke(); // Render the line
-    ctx.beginPath(); // Start a new path for continuous drawing
-    ctx.moveTo(x, y); // Move the cursor to the current position
-    console.log("Drawing at:", x, y);
+    ctx.lineTo(x, y);
+    ctx.stroke();
 }
 
 // Get the x, y coordinates relative to the canvas
@@ -56,8 +46,29 @@ function getCanvasCoordinates(event) {
     };
 }
 
-// Clear the canvas
+// Save and clear canvas
+let undoStack = [];
+function saveState() {
+    undoStack.push(canvas.toDataURL());
+}
 document.getElementById("clearButton").addEventListener("click", () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    console.log("Canvas cleared");
+    saveState();
 });
+
+// Event listeners for drawing
+canvas.addEventListener("mousedown", startDrawing);
+canvas.addEventListener("mousemove", draw);
+canvas.addEventListener("mouseup", stopDrawing);
+canvas.addEventListener("mouseleave", stopDrawing);
+
+canvas.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    startDrawing(e);
+}, { passive: false });
+canvas.addEventListener("touchmove", (e) => {
+    e.preventDefault();
+    draw(e);
+}, { passive: false });
+canvas.addEventListener("touchend", stopDrawing);
+canvas.addEventListener("touchcancel", stopDrawing);
