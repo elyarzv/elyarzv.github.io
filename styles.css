@@ -31,9 +31,9 @@ body {
 /* Media Query for Smartphones */
 @media (max-width: 800px) {
     .zoom-text {
-        font-size: 6vw;
+        font-size: 5rem;
         font-weight: bold;
         white-space: normal;
-
+        max-width: 90%;
     }
 }
