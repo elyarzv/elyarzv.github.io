@@ -56,6 +56,11 @@ document.getElementById("clearButton").addEventListener("click", () => {
     saveState();
 });
 
+// Prevent scrolling on touch events for canvas
+["touchstart", "touchmove", "touchend", "touchcancel"].forEach((event) => {
+    canvas.addEventListener(event, (e) => e.preventDefault(), { passive: false });
+});
+
 // Event listeners for drawing
 canvas.addEventListener("mousedown", startDrawing);
 canvas.addEventListener("mousemove", draw);
@@ -63,12 +68,21 @@ canvas.addEventListener("mouseup", stopDrawing);
 canvas.addEventListener("mouseleave", stopDrawing);
 
 canvas.addEventListener("touchstart", (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent scrolling
     startDrawing(e);
 }, { passive: false });
+
 canvas.addEventListener("touchmove", (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent scrolling
     draw(e);
 }, { passive: false });
-canvas.addEventListener("touchend", stopDrawing);
-canvas.addEventListener("touchcancel", stopDrawing);
+
+canvas.addEventListener("touchend", (e) => {
+    e.preventDefault(); // Prevent scrolling
+    stopDrawing();
+}, { passive: false });
+
+canvas.addEventListener("touchcancel", (e) => {
+    e.preventDefault(); // Prevent scrolling
+    stopDrawing();
+}, { passive: false });
