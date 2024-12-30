@@ -1,15 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoom Effect</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elyar's Portfolio</title>
+  <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
 </head>
-<body>
-    <div class="zoom-wrapper">
-        <div class="zoom-text">Hi my name is Elyar</div>
+<body id="home">
+  <div class="page-container">
+    <nav>
+      <div class="menu">
+        <div class="menu-background"></div>
+        <div class="menu-left">
+          <ul class="menu-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#studies">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+        </div>
+        <div class="menu-right">
+          <ul class="menu-list">
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#resume" class="resume-button">Resume</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="typing-container" translate="no" ></div>
+
+    <div class="studies-container" id="studies">
+      <div class="separator-line"></div>
+      <h1>Education</h1>
+      <div class="education">
+        <div class="degree">
+          <h2>Simon Fraser University</h2>
+          <p><strong>Graduate Student of Engineering Science Department</strong></p>
+          <p>Burnaby, Canada | Sep 2022 - Dec 2024</p>
+          <p>Thesis: Integrated Approach to Parallel-Jaw and Suction Grasping</p>
+          <ul>
+            <li>Developed an adaptive robotic gripper for versatile object manipulation.</li>
+            <li>Validated designs through simulation and modeling.</li>
+            <li>Conducted extensive spring-mass system analysis to ensure suction grasp stability.</li>
+          </ul>
+        </div>
+        <div class="degree">
+          <h2>Tarbiat Modares University</h2>
+          <p><strong>Master of Science in Electrical and Control Engineering</strong></p>
+          <p>Tehran, Iran | Sep 2014 - Feb 2017</p>
+          <p>Thesis: Consensus of Fractional Order Multi-Agent Systems via Decentralized Dynamic Output Feedback Controller</p>
+        </div>
+        <div class="degree">
+          <h2>University of Tabriz</h2>
+          <p><strong>Bachelor of Technology in Electrical and Control Engineering</strong></p>
+          <p>Tabriz, Iran | Sep 2008 - Sep 2013</p>
+          <p>Thesis: Modeling, Designing, Manufacturing, and Controlling a Minesweeper Robot</p>
+        </div>
+      </div>
     </div>
-    <script src="script.js" defer></script>
+    <div class="studies-container" id="projects">
+      <div class="separator-line"></div>
+      <h1>Projects</h1>
+      <div class="education">
+        <div class="degree" style="display: flex; align-items: center; gap: 20px;">
+          <img src="images/DualGripper.gif" alt="Sample Image" style="filter: brightness(1) contrast(1.07); width: 30%; flex-shrink: 0;">
+          <div>
+            <h2>Dual Gripper System</h2>
+            <p><strong>Graduate Student of Engineering Science Department</strong></p>
+            <p>Burnaby, Canada | Sep 2022 - Dec 2024</p>
+            <p>Thesis: Integrated Approach to Parallel-Jaw and Suction Grasping</p>
+            <ul>
+              <li>Developed an adaptive robotic gripper for versatile object manipulation.</li>
+              <li>Validated designs through simulation and modeling.</li>
+              <li>Conducted extensive spring-mass system analysis to ensure suction grasp stability.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="degree">
+          <h2>Tarbiat Modares University</h2>
+          <p><strong>Master of Science in Electrical and Control Engineering</strong></p>
+          <p>Tehran, Iran | Sep 2014 - Feb 2017</p>
+          <p>Thesis: Consensus of Fractional Order Multi-Agent Systems via Decentralized Dynamic Output Feedback Controller</p>
+        </div>
+        <div class="degree">
+          <h2>University of Tabriz</h2>
+          <p><strong>Bachelor of Technology in Electrical and Control Engineering</strong></p>
+          <p>Tabriz, Iran | Sep 2008 - Sep 2013</p>
+          <p>Thesis: Modeling, Designing, Manufacturing, and Controlling a Minesweeper Robot</p>
+        </div>
+      </div>      
+
+    </div>
+  </div>
+
+    <!-- Script Section -->
+    <script src="script.js"></script>
 </body>
 </html>

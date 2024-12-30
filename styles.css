@@ -1,40 +1,287 @@
-/* Reset */
-* {
+/* Regular */
+@font-face {
+    font-family: 'JetBrains Mono 2';
+    src: url('fonts/JetBrainsMono-2/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'JetBrains Mono 2';
+    src: url('fonts/JetBrainsMono-2/JetBrainsMono-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Italic */
+@font-face {
+    font-family: 'JetBrains Mono 2';
+    src: url('fonts/JetBrainsMono-2/JetBrainsMono-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Bold Italic */
+@font-face {
+    font-family: 'JetBrains Mono 2';
+    src: url('fonts/JetBrainsMono-2/JetBrainsMono-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Light */
+@font-face {
+    font-family: 'JetBrains Mono 2';
+    src: url('fonts/JetBrainsMono-2/JetBrainsMono-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Light Italic */
+@font-face {
+    font-family: 'JetBrains Mono 2';
+    src: url('fonts/JetBrainsMono-2/JetBrainsMono-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* ExtraBold */
+@font-face {
+    font-family: 'JetBrains Mono 2';
+    src: url('fonts/JetBrainsMono-2/JetBrainsMono-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* ExtraBold Italic */
+@font-face {
+    font-family: 'JetBrains Mono 2';
+    src: url('fonts/JetBrainsMono-2/JetBrainsMono-ExtraBoldItalic.woff2') format('woff2');
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* SemiBold */
+@font-face {
+    font-family: 'JetBrains Mono 2';
+    src: url('fonts/JetBrainsMono-2/JetBrainsMono-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* SemiBold Italic */
+@font-face {
+    font-family: 'JetBrains Mono 2';
+    src: url('fonts/JetBrainsMono-2/JetBrainsMono-SemiBoldItalic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* Thin */
+@font-face {
+    font-family: 'JetBrains Mono 2';
+    src: url('fonts/JetBrainsMono-2/JetBrainsMono-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Thin Italic */
+@font-face {
+    font-family: 'JetBrains Mono 2';
+    src: url('fonts/JetBrainsMono-2/JetBrainsMono-ThinItalic.woff2') format('woff2');
+    font-weight: 100;
+    font-style: italic;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1e1e1e; /* Background color */
+    margin: 0;                /* Remove default margins */
+    padding: 0;               /* Remove any default padding */
+    height: 1000vh;
+}
+
+.page-container {
+    width: 100%;              /* Full width for smaller screens */
+    max-width: 1250px;        /* Restrict to 1250px for larger screens */
+    margin: 0 auto;           /* Center the container horizontally */
+    box-sizing: border-box;   /* Include padding in width calculations */
+    display: flex;            /* Flexbox layout */
+    flex-direction: column;   /* Stack items vertically */
+    justify-content: flex-start; /* Align items to the top of the container */
+    height: 100vh;            /* Full viewport height */
+    padding: 90px 0;
+}
+
+
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;               /* Match the container's width */
+    max-width: 1250px;
+    padding: 30px 20px;         /* Padding for spacing */
+    position: fixed;         /* Position relative for background alignment */
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+/* Menu Styling */
+.menu-background {
+    position: absolute;
+    top: 0;
+    left: -10%;                /* Extend background slightly to the left */
+    width: 120%;   /* Make it slightly wider than the menu */
+    height: 100%;               /* Match the menu's height */
+    background-color: rgba(30, 30, 30, 0.4); /* Semi-transparent background */
+    backdrop-filter: blur(40px);  /* Add blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
+    z-index: -1;                /* Place it behind the menu */
+}
+.menu-left,
+.menu-right {
+    display: flex; /* Flexbox for horizontal alignment of buttons */
+}
+.menu::after {
+    content: "";               /* Add an empty content block */
+    position: absolute;        /* Position it absolutely */
+    bottom: 0;                 /* Stick to the bottom of the menu */
+    left: 15%;                 /* Offset from the left */
+    width: 85%;               /* Span the full width of the menu */
+    height: 0.4px;             /* Ultra-thin height */
+    background-color: #979797; /* Line color */
+}
+.menu-list {
+    display: flex;              /* Horizontal menu items */
+    justify-content: flex;  /* Align items to the right */
     margin: 0;
     padding: 0;
+    list-style: none;           /* Remove default bullet points */
+}
+.menu-list-right {
+    display: flex;              /* Horizontal menu items */
+    justify-content:end;  /* Align items to the right */
+    margin: 0;
+    padding: 0;
+    list-style: none;           /* Remove default bullet points */
+}
+.menu-list li{
+    margin-right: 20px;          /* Spacing between menu items */
+}
+.menu-list li a:not(.resume-button) {
+    text-decoration: none;      /* Remove underline from links */
+    color: #cdcdcd;             /* Link text color */
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    padding: 0px 0;             
+    border-bottom: 2px solid transparent;
+}
+.menu-list li a:not(.resume-button):hover {
+    border-bottom: 2px solid #a4a4a4; 
+}
+/* Resume Button Styling */
+.resume-button {
+    font-family: 'JetBrains Mono 2', monospace;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #177dff;
+    padding: 8px 23px;     
+    border-radius: 16px;     
+}
+  
+.resume-button:hover {
+    background-color: #0259cb; /* Slightly lighter hover color */
+}
+.typing-container {
+    display: flex;
+    flex-direction: column;   
+    overflow: visible;   
+    justify-content: center;  
+    width: 100%;            
+    max-width: 1250px;   
+    min-height: 500px;       
+    margin: auto 0;          
+    background-color: #1e1e1e; 
+    box-sizing: border-box;    
+}
+.typed-line {
+    line-height: 1;  
+    font-family: 'JetBrains Mono 2', monospace;
+    font-weight: 400;
+    font-size: 6rem;
+    color: #ffffff;
+}
+
+.separator-line {
+    position: relative;         /* Keep it in the normal document flow */
+    width: 100%;                /* Full width */
+    max-width: 1250px;          /* Restrict to match the container's width */
+    height: 0.3px;                /* Ultra-thin line */
+    background-color: #979797;  /* Line color */
+    margin: 40px auto;          /* Space above and below the separator */
+    box-sizing: border-box;     /* Include padding in width calculations */
+}
+.studies-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 40px auto;
+    width: 100%;
+    max-width: 1250px;
+    padding: 20px;
+    font-family: 'JetBrains Mono 2', monospace;
+    font-size: 1.2rem;
+    color: #9b3a3a;
+    background-color: #1e1e1e;
     box-sizing: border-box;
 }
 
-/* Fullscreen Black Background */
-body {
-    background-color: black;
-    color: white;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    height: 200vh; /* Make the page scrollable */
+.studies-container h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #e6e6e6;
 }
 
-/* Zoom Text */
-.zoom-text {
-    position: fixed; /* Keeps the text centered */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 5rem; /* Default font size */
-    font-weight: bold;
-    text-align: center; /* Center-aligns the text */
-    max-width: 90%; /* Constrain the text width */
-    word-wrap: break-word; /* Ensure words wrap properly */
-    white-space: normal; /* Allow the text to wrap */
-    line-height: 1.2; /* Space between lines */
+.education {
+    width: 100%;
 }
 
-/* Media Query for Smartphones */
-@media (max-width: 800px) {
-    .zoom-text {
-        font-size: 1rem;
-        font-weight: bold;
-        white-space: normal;
-        max-width: 90%;
-        line-height: 1.2;
-    }
+.degree {
+    margin-bottom: 30px;
+}
+
+.degree h2 {
+    font-size: 1.5rem;
+    color: #f5f5f5;
+    margin-bottom: 10px;
+}
+
+.degree p {
+    font-size: 1rem;
+    color: #dcdcdc;
+    margin: 5px 0;
+}
+
+.degree ul {
+    list-style-type: disc;
+    margin: 10px 20px;
+    padding: 0;
+}
+
+.degree ul li {
+    margin-bottom: 8px;
+    color: #bcbcbc;
+}
+
+.degree-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
