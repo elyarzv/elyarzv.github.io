@@ -58,36 +58,120 @@
         </div>
       </div>
     </div>
+
+<!-- Projects Section -->    
     <div class="studies-container" id="projects">
       <div class="separator-line"></div>
       <h1>Projects</h1>
-      <div class="education">
-        <div class="degree" style="display: flex; align-items: center; gap: 20px;">
-          <img src="images/DualGripper.gif" alt="Sample Image" style="filter: brightness(1) contrast(1.07); width: 30%; flex-shrink: 0;">
-          <div>
-            <h2>Dual Gripper System</h2>
-            <p><strong>Graduate Student of Engineering Science Department</strong></p>
-            <p>Burnaby, Canada | Sep 2022 - Dec 2024</p>
-            <p>Thesis: Integrated Approach to Parallel-Jaw and Suction Grasping</p>
-            <ul>
-              <li>Developed an adaptive robotic gripper for versatile object manipulation.</li>
-              <li>Validated designs through simulation and modeling.</li>
-              <li>Conducted extensive spring-mass system analysis to ensure suction grasp stability.</li>
-            </ul>
+      <div class="degree" style="display: flex; align-items: flex-start; gap: 20px; width: 100%;">
+        <!-- Image Section -->
+        <a href="your-link.html" style="flex-shrink: 0;">
+          <img src="images/DualGripper.gif" alt="Sample Image" class="zoom-image" 
+               style="filter: contrast(1.07); max-width: 300px; width: 100%;">
+        </a>
+          <style>
+            .zoom-image {
+              transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
+            }
+            .zoom-image:hover {
+              transform: scale(1.1); /* Scales the image slightly on hover */              
+            }
+          </style>
+          <div style="margin-left: 20px; flex-grow: 1;">
+            <h2 class="clickable-heading">Dual Gripper System</h2>
+            <p><strong>RAMP Lab - Simon Fraser University</strong></p>
+            <p>Burnaby, Canada</p>
+            <p style="font-size:large;">The Dual Gripping System integrates parallel-jaw and suction grasping capabilities into a single adaptive robotic gripper. Designed for versatility, the system employs deep learning to optimize grasping strategies for a variety of objects and environments. By combining pinch and suction grasps, the gripper ensures enhanced stability and adaptability in handling tasks, paving the way for innovative applications in automation and robotics.</p>
+            <p style="font-size:medium; color:sandybrown;">Skill utilized: Machine Learning, Python, Linear Programming, TensorFlow, Robotics, Computer Vision, Mechanical Design, Simulation, Hardware Prototyping, and Technical Documentation.</p>
           </div>
         </div>
-        <div class="degree">
-          <h2>Tarbiat Modares University</h2>
-          <p><strong>Master of Science in Electrical and Control Engineering</strong></p>
-          <p>Tehran, Iran | Sep 2014 - Feb 2017</p>
-          <p>Thesis: Consensus of Fractional Order Multi-Agent Systems via Decentralized Dynamic Output Feedback Controller</p>
+
+        <div class="degree" style="display: flex; align-items: flex-start; gap: 20px; width: 100%;">
+          <!-- Image Section -->
+          <a href="your-link.html" style="flex-shrink: 0;">
+            <img src="images/GQ-CNN.png" alt="Sample Image" class="zoom-image" 
+                 style="filter: contrast(1.07); max-width: 300px; width: 100%; align-content: center;">
+          </a>
+        
+          <!-- Text Section -->
+          <div style="margin-left: 20px; flex-grow: 1;">
+            <h2 class="clickable-heading">DualGripNet</h2>
+            <p><strong>RAMP Lab - Simon Fraser University</strong></p>
+            <p>Burnaby, Canada</p>
+            <p style="font-size: large;">
+              DualGripNet is a deep learning model developed for a dual robotic gripper capable of performing pinch and suction grasps. Synthetic data was generated in simulation by sampling diverse object shapes and annotating them with potential pinch and suction grasp points. The model was trained on this dataset to predict grasp types and locations based on object geometry. DualGripNet enables the gripper to choose and execute the most suitable grasp for stable object handling.
+            </p>
+            <p style="font-size: medium; color: sandybrown;">
+              Skills utilized: Deep Learning, Synthetic Data Generation, Robotics, Grasping, Data Processing and Annotation, Python, TensorFlow.
+            </p>
+          </div>
         </div>
-        <div class="degree">
-          <h2>University of Tabriz</h2>
-          <p><strong>Bachelor of Technology in Electrical and Control Engineering</strong></p>
-          <p>Tabriz, Iran | Sep 2008 - Sep 2013</p>
-          <p>Thesis: Modeling, Designing, Manufacturing, and Controlling a Minesweeper Robot</p>
+
+
+        <div class="degree" style="display: flex; align-items: flex-start; gap: 20px; width: 100%;">
+          <!-- Image Section -->
+          <a href="your-link.html" style="flex-shrink: 0;">
+            <img src="images/Phoenix.png" alt="Sample Image" class="zoom-image" 
+                 style="filter: contrast(1.07); max-width: 300px; width: 100%;">
+          </a>
+        
+          <!-- Text Section -->
+          <div style="margin-left: 20px; flex-grow: 1;">
+            <h2 class="clickable-heading">Phoenix Robot Testing with BehaviourTree Framework</h2>
+            <p><strong>Software Team - Advanced Intelligent Systems (AIS)</strong></p>
+            <p>Burnaby, Canada</p>
+            <p style="font-size: large;">
+              Developed a robust testing framework for the Phoenix robot using BehaviorTree.CPP and Groot. 
+              Designed a ROS-based environment with predefined modules such as low_battery, collision, and delay, 
+              enabling seamless creation of test cases. The solution included an intuitive interface via Groot, 
+              allowing non-technical users to connect test nodes and validate various robotic functionalities efficiently. 
+              This framework streamlined the testing process and improved collaboration across teams.
+            </p>
+            <p style="font-size: medium; color: sandybrown;">
+              Skills utilized: ROS, Robot Testing, BehaviourTree, C++, Software Integration
+            </p>
+          </div>
         </div>
+
+        <div class="degree" style="display: flex; align-items: flex-start; gap: 20px; width: 100%;">
+
+          <!-- Image Section -->
+          <div style="flex-shrink: 0; overflow: hidden; max-height: 380px; max-width: 300px;">
+            <a href="your-link.html" style="flex-shrink: 0;">
+              <img 
+                src="images/pedasysLine.gif" 
+                alt="Sample Image" 
+                style="filter: contrast(1.395); transform: translateX(-230px); width: 250%;" 
+                onmouseover="this.style.transform='translate(-230px, -420px)'; this.backgroundColor='red';" 
+                onmouseout="this.style.transform='translate(-230px, 0px)';" >
+            </a>
+          </div>
+          
+          <div style="margin-left: 20px; flex-grow: 1;">
+            <h2 class="clickable-heading">Optimal Gait Design for Lower Extremity Exoskeleton (Exoped)</h2>
+            <p><strong>Pedasys Company</strong></p>
+            <p>Tehran, Iran</p>
+            <p style="font-size:large;">In this project, we proposed a systematic approach to design an optimal gait for lower extremity exoskeletons, addressing the stability challenges faced by users. A feedback-controlled system was developed to dynamically adjust walking parameters, ensuring smooth motion. By solving an optimal control problem and minimizing cost functions, the method generates walking patterns with spline interpolation and sinusoidal trajectories. The proposed approach enhances stability, adaptability, and user comfort in robotic assistive devices, validated through simulations and analysis.</p>
+            <p style="font-size:medium; color:sandybrown;">Skill utilized: Robotics, Control Systems, Optimal Control, Feedback Control System, Optimization, MATLAB.</p>
+          </div>
+        </div>
+
+        <div class="degree" style="display: flex; align-items: flex-start; gap: 20px; width: 100%;">
+          <!-- Image Section -->
+          <a href="your-link.html" style="flex-shrink: 0;">
+            <img src="images/ConsensusPaper.gif" alt="Sample Image" class="zoom-image" 
+                 style="filter: contrast(1.07); max-width: 300px; width: 90%;">
+          </a>
+          <div style="margin-left: 20px; flex-grow: 1;">
+            <h2 class="clickable-heading">Fractrional order Multi-agent system Consensus</h2>
+            <p><strong>Tarbiat Modares University</strong></p>
+            <p>Tehran, Iran</p>
+            <p style="font-size:large;">This research addresses the consensus problem in nonlinear fractional-order multi-agent systems (FOMAS) with uncertainties. It introduces a dynamic output feedback controller leveraging neighboring agents’ outputs to ensure robust stability using Lyapunov methods and linear matrix inequalities (LMIs). The study accounts for nonlinearities and uncertainties through advanced mathematical frameworks like the S-procedure and Schur complement. Simulation results validate the proposed method’s efficiency in achieving consensus under challenging conditions, demonstrating its applicability in control engineering.</p>
+            <p style="font-size:medium; color:sandybrown;">Skill utilized: Control Systems, Linear Programming, Optimization, MATLAB.</p>
+          </div>
+        </div>
+        
+        
       </div>      
 
     </div>

@@ -285,3 +285,16 @@ body {
     align-items: center;
     margin-bottom: 10px;
 }
+
+
+.clickable-heading {
+color: black; /* Default text color */
+cursor: pointer; /* Change cursor to pointer */
+text-decoration: none; /* Remove underline by default */
+transition: color 0.3s, text-decoration 0.3s; /* Smooth transition */
+}
+
+.clickable-heading:hover {
+color: #007BFF; /* Change color on hover */
+text-decoration: underline; /* Add underline on hover */
+}
