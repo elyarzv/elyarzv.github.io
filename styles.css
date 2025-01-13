@@ -102,7 +102,7 @@ body {
     background-color: #1e1e1e; /* Background color */
     margin: 0;                /* Remove default margins */
     padding: 0;               /* Remove any default padding */
-    height: 1000vh;
+    height:auto;
 }
 
 body.gripper {
