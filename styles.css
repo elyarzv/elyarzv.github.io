@@ -105,6 +105,13 @@ body {
     height: 1000vh;
 }
 
+body.gripper {
+    background-color: #1e1e1e; /* Background color */
+    margin: 0;                /* Remove default margins */
+    padding: 0;               /* Remove any default padding */
+    height: 3000vh;
+}
+
 .page-container {
     width: 100%;              /* Full width for smaller screens */
     max-width: 1250px;        /* Restrict to 1250px for larger screens */
@@ -298,3 +305,5 @@ transition: color 0.3s, text-decoration 0.3s; /* Smooth transition */
 color: #007BFF; /* Change color on hover */
 text-decoration: underline; /* Add underline on hover */
 }
+ 
+

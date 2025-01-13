@@ -4,9 +4,39 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Elyar's Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    
+    .animation-container {
+      position: fixed; /* Keeps the animation fixed in the viewport */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      visibility: hidden; /* Initially hidden */
+    }
+    .animation-container.active {
+      visibility: visible; /* Becomes visible after threshold */
+    }
+    img {
+      max-width: 100%;
+      max-height: 73%;
+      display: none; /* Initially hide all images */
+      filter: contrast(0.93);
+    }
+    img.visible {
+      display: block; /* Show the current image */
+    }
+  </style>
   <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
 </head>
-<body>
+<body class="gripper">
   <div class="page-container">
     <nav>
       <div class="menu">
@@ -24,19 +54,60 @@
         </div>
       </div>
     </nav>
-
-
     <div class="studies-container" style="display: flex;  align-items: center; text-align: center;" id="studies">
       <h1 style="margin: 0;">Dual Gripper System</h1>
-      <h1 style="text-decoration: none; font-size:xx-large; ">Two Grips, Infinite Possibilities</h1>
-      <video autoplay loop muted style="width: 100%;">
+      <h1 style="text-decoration: none; font-size:xx-large;">Two Grips, Infinite Possibilities</h1>
+      <video autoplay loop muted style="width: 100%; ">
         <source src="images/dualGripper_compatible.mp4" type="video/mp4">
         <p>Your browser does not support the video tag.</p>
       </video>
+      <div class="animation-container">
+        <!-- Images will be dynamically loaded here -->
+      </div>
     </div>
+    
+  
+    <script>
+      const container = document.querySelector('.animation-container');
+      const totalImages = 70; // Total number of images
+      const images = [];
+      const threshold = window.innerHeight; // Trigger animation after initial content
+      const progressFactor = 0.01;
+  
+      // Preload images
+      for (let i = 1; i <= totalImages; i=i+1) {
+        const img = document.createElement('img');
+        const frameNumber = String(i).padStart(4, '0'); // Pads the number to 4 digits
+        img.src = `images/gripperAnimation/${frameNumber}.png`; // Replace with the correct path
+        container.appendChild(img);
+        images.push(img);
+      }
+  
+      // Handle scroll event
+      window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+  
+        // Activate animation container after threshold
+        if (scrollPosition > threshold) {
+          container.classList.add('active');
+        } else {
+          container.classList.remove('active');
+        }
+  
+        // Calculate frame index for animation
+        const frameIndex = Math.min(
+          totalImages - 1,
+          Math.floor((scrollPosition - threshold) * progressFactor)
+        );
+  
+        if (scrollPosition > threshold) {
+          images.forEach((img, index) => {
+            img.classList.toggle('visible', index === frameIndex);
+          });
+        }
+      });
+    </script>
 
-
-    <!-- Script Section -->
-    <script src="script.js"></script>
 </body>
 </html>
+
