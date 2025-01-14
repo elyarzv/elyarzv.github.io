@@ -312,6 +312,26 @@ body.gripper {
         margin-left: 0; /* Remove left margin for text */
         text-align: left; /* Align text to the left */
     }
+
+    .typing-container {
+        display: flex;
+        flex-direction: column;   
+        overflow: visible;   
+        justify-content: center;  
+        width: 100%;            
+        max-width: 1250px;   
+        min-height: 500px;       
+        margin: auto 0;          
+        background-color: #1e1e1e; 
+        box-sizing: border-box;    
+    }
+    .typed-line {
+        line-height: 1;  
+        font-family: 'JetBrains Mono 2', monospace;
+        font-weight: 400;
+        font-size: 4rem;
+        color: #ffffff;
+    }
 }
 
 
