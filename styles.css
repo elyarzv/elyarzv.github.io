@@ -319,7 +319,7 @@ body.gripper {
         overflow: visible;   
         justify-content: center;  
         width: 100%;            
-        max-width: 1250px;   
+        max-width: 768px;   
         min-height: 500px;       
         margin: auto 0;          
         background-color: #1e1e1e; 
@@ -329,7 +329,7 @@ body.gripper {
         line-height: 1;  
         font-family: 'JetBrains Mono 2', monospace;
         font-weight: 400;
-        font-size: 4rem;
+        font-size: 3rem;
         color: #ffffff;
     }
 }
