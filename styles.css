@@ -332,6 +332,28 @@ body.gripper {
         font-size: 3rem;
         color: #ffffff;
     }
+
+    .menu-list li a:not(.resume-button) {
+        text-decoration: none;      /* Remove underline from links */
+        color: #cdcdcd;             /* Link text color */
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.5rem;
+        padding: 0px 0;             
+        border-bottom: 2px solid transparent;
+    }
+    .menu-list li a:not(.resume-button):hover {
+        border-bottom: 2px solid #a4a4a4; 
+    }
+    /* Resume Button Styling */
+    .resume-button {
+        font-family: 'JetBrains Mono 2', monospace;
+        font-size: 0.5rem;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #177dff;
+        padding: 8px 23px;     
+        border-radius: 16px;     
+    }
 }
 
 
