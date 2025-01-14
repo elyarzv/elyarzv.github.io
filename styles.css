@@ -337,7 +337,7 @@ body.gripper {
         text-decoration: none;      /* Remove underline from links */
         color: #cdcdcd;             /* Link text color */
         font-family: 'JetBrains Mono', monospace;
-        font-size: 0.5rem;
+        font-size: 0.4rem;
         padding: 0px 0;             
         border-bottom: 2px solid transparent;
     }
@@ -347,7 +347,7 @@ body.gripper {
     /* Resume Button Styling */
     .resume-button {
         font-family: 'JetBrains Mono 2', monospace;
-        font-size: 0.5rem;
+        font-size: 0.4rem;
         text-decoration: none;
         color: #ffffff;
         background-color: #177dff;
