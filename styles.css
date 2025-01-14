@@ -297,7 +297,7 @@ body.gripper {
     .degree {
         flex-wrap: wrap; /* Allow wrapping on smaller screens */
         flex-direction: column; /* Stack items vertically */
-        align-items: left; /* Center content */
+        align-items: flex-start; /* Align items to the left */
     }
 
     .degree a {
@@ -306,7 +306,7 @@ body.gripper {
 
     .degree div {
         margin-left: 0; /* Remove left margin for text */
-        text-align: left; /* Center-align the text */
+        text-align: left; /* Align text to the left */
     }
 }
 
