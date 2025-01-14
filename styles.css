@@ -293,6 +293,23 @@ body.gripper {
     margin-bottom: 10px;
 }
 
+@media screen and (max-width: 768px) {
+    .degree {
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        flex-direction: column; /* Stack items vertically */
+        align-items: left; /* Center content */
+    }
+
+    .degree a {
+        margin-bottom: 20px; /* Add spacing below the image */
+    }
+
+    .degree div {
+        margin-left: 0; /* Remove left margin for text */
+        text-align: left; /* Center-align the text */
+    }
+}
+
 
 .clickable-heading {
 color: black; /* Default text color */
