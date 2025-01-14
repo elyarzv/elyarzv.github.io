@@ -261,6 +261,10 @@ body.gripper {
 }
 
 .degree {
+    display: flex; 
+    align-items: flex-start; 
+    gap: 20px; 
+    width: 100%;
     margin-bottom: 30px;
 }
 
