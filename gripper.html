@@ -18,7 +18,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      z-index: 10;
+      z-index: 100;
       visibility: hidden; /* Initially hidden */
     }
     .animation-container.active {
@@ -64,6 +64,7 @@
       <div class="animation-container">
         <!-- Images will be dynamically loaded here -->
       </div>
+      <h1 style=" transform:translateY(7000px); text-decoration: none; font-size:xx-large;">To be Completed!</h1>
     </div>
     
   
@@ -71,16 +72,17 @@
       const container = document.querySelector('.animation-container');
       const totalImages = 63; // Total number of images
       const images = [];
-      const threshold = window.innerHeight; // Trigger animation after initial content
+      const threshold = 200; // Trigger animation after initial content
       const progressFactor = 0.01;
   
       // Preload images
-      for (let i = 1; i <= totalImages; i=i+1) {
+      for (let i = 1; i <= totalImages+1; i=i+1) {
         const img = document.createElement('img');
         const frameNumber = String(i).padStart(4, '0'); // Pads the number to 4 digits
         img.src = `images/gripperAnimation/${frameNumber}.png`; // Replace with the correct path
         container.appendChild(img);
         images.push(img);
+  
       }
   
       // Handle scroll event
@@ -105,6 +107,10 @@
             img.classList.toggle('visible', index === frameIndex);
           });
         }
+        // Remove the last image when scrolling past the last frame
+    if (frameIndex === totalImages - 1 && scrollPosition > threshold + (totalImages * progressFactor)) {
+      images[totalImages - 1].classList.remove('visible');
+    }
       });
     </script>
 

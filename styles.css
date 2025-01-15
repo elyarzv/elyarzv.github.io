@@ -221,7 +221,7 @@ body.gripper {
     line-height: 1;  
     font-family: 'JetBrains Mono 2', monospace;
     font-weight: 400;
-    font-size: 6rem;
+    font-size: 5rem;
     color: #ffffff;
 }
 
@@ -250,8 +250,38 @@ body.gripper {
     box-sizing: border-box;
 }
 
+.card-container {
+    font-family: 'JetBrains Mono 2', monospace;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.card {
+    font-family: 'JetBrains Mono 2', monospace;
+    background: #20262d;
+    border: 0.2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card h3 {
+    margin-top: 0;
+    color: #177dff;
+}
+.card p {
+    margin: 5px 0;
+    color: #ffffff;
+}
+.card strong {
+    color: #ffffff;
+}
+
 .studies-container h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 20px;
     color: #e6e6e6;
 }
