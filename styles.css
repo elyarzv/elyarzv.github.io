@@ -103,13 +103,7 @@ body {
     margin: 0;                /* Remove default margins */
     padding: 0;               /* Remove any default padding */
     height:auto;
-}
 
-body.gripper {
-    background-color: #1e1e1e; /* Background color */
-    margin: 0;                /* Remove default margins */
-    padding: 0;               /* Remove any default padding */
-    height: 3000vh;
 }
 
 .page-container {
@@ -122,6 +116,7 @@ body.gripper {
     justify-content: flex-start; /* Align items to the top of the container */
     height: 100vh;            /* Full viewport height */
     padding: 90px 0;
+
 }
 
 
