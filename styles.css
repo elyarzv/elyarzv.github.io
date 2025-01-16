@@ -327,6 +327,7 @@ body.gripper {
     margin-bottom: 10px;
 }
 
+
 @media screen and (max-width: 768px) {
     .degree {
         flex-wrap: wrap; /* Allow wrapping on smaller screens */
