@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Images</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .scroll-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      height: 30000px; /* Ensure enough scrollable height */
+      background-color: aqua;
+    }
+
+    .sticky-image {
+      max-width: 48%;
+      height: auto;
+      filter: contrast(0.925);
+      position: sticky;
+      top: 0%; /* 20% margin from the top of the viewport */
+    }
+  </style>
+</head>
+<body>
+  <div class="scroll-container">
+    <img class="sticky-image" src="images/parallelAnimation/ezgif.com-reverse-2.gif" alt="Dual Gripper GIF">
+    <img class="sticky-image" src="images/suctionAnimation/ezgif.com-reverse.gif" alt="Dual Gripper GIF">
+    <img class="sticky-image" src="images/parallelAnimation/ezgif.com-reverse-2.gif" alt="Dual Gripper GIF">
+    <img class="sticky-image" src="images/suctionAnimation/ezgif.com-reverse.gif" alt="Dual Gripper GIF">
+  </div>
+</body>
+</html>

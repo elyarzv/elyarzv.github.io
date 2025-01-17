@@ -98,13 +98,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    background-color: #1e1e1e; /* Background color */
-    margin: 0;                /* Remove default margins */
-    padding: 0;               /* Remove any default padding */
-    height:auto;
 
-}
 
 .page-container {
     width: 100%;              /* Full width for smaller screens */
