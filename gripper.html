@@ -198,12 +198,23 @@
       
   <script>
     const totalFrames = 63; // Number of images in the sequence
+    const imageFolder = "images/gripperAnimation/"; // Path to the images
+    const images = []; // Array to hold preloaded images
     const imageElement = document.getElementById('scrolling-image');
     let lastFrameIndex = -1; // Track the last frame to avoid redundant updates
   
     const startThreshold = 700; // Pixels of scroll before the animation starts
     const scrollMultiplier = 1; // Increase this value to make images change faster after the threshold
-  
+    
+    for (let i = 1; i <= totalFrames; i++) {
+      const frameNumber = String(i).padStart(4, '0'); // Format frame number (e.g., 0001, 0002)
+      const img = new Image();
+      img.src = `${imageFolder}${frameNumber}.png`; // Set image source
+      images.push(img); // Add the image to the array
+    }
+
+  console.log("Images preloaded:", images.length);
+
     // Update the image source based on the scroll position
     window.addEventListener('scroll', () => {
       const scrollTop = window.scrollY; // Get vertical scroll position
