@@ -194,23 +194,31 @@ html {
 .resume-button:hover {
     background-color: #0259cb; /* Slightly lighter hover color */
 }
-.typing-container {
+.container {
     display: flex;
-    flex-direction: column;   
-    overflow: visible;   
-    justify-content: center;  
-    width: 100%;            
-    max-width: 1250px;   
-    min-height: 500px;       
-    margin: auto 0;          
+    flex-direction:unset;
+    justify-content: center;
+    align-items: center; /* Align items vertically center */
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 20px; /* Add space between items */
+  }
+.profilePicture{
+    margin: 20px;
+    width: 300px; 
+    height: 300px; 
+    border-radius: 50%; 
+    margin-right: 0px;
+}
+.typing-container {
+    margin: 20px;
+    flex-grow: 1;
     background-color: #1e1e1e; 
-    box-sizing: border-box;    
 }
 .typed-line {
     line-height: 1;  
     font-family: 'JetBrains Mono 2', monospace;
     font-weight: 400;
-    font-size: 5rem;
+    font-size: 3rem;
     color: #ffffff;
 }
 
@@ -249,7 +257,7 @@ html {
     font-family: 'JetBrains Mono 2', monospace;
     background: #20262d;
     border: 0.2px solid #ddd;
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: transform 0.3s ease;
@@ -332,24 +340,28 @@ html {
         margin-left: 0; /* Remove left margin for text */
         text-align: left; /* Align text to the left */
     }
-
-    .typing-container {
+    .container {
         display: flex;
-        flex-direction: column;   
-        overflow: visible;   
-        justify-content: center;  
-        width: 100%;            
-        max-width: 768px;   
-        min-height: 500px;       
-        margin: auto 0;          
-        background-color: #1e1e1e; 
-        box-sizing: border-box;    
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Align items vertically center */
+        gap: 20px; /* Add space between items */
+      }
+    .profilePicture{
+        width: 200px; 
+        height: 200px; 
+        border-radius: 50%; 
+        margin-right: 0px;
+    }
+    .typing-container {        
+        background-color: #1e1e1e;  
+        margin: 20px;
     }
     .typed-line {
-        line-height: 1;  
+
         font-family: 'JetBrains Mono 2', monospace;
         font-weight: 400;
-        font-size: 3rem;
+        font-size: 2rem;
         color: #ffffff;
     }
 
